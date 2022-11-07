@@ -7,7 +7,7 @@ import tareas from "./routes/listaTareas.routes"
 
 const app = express();
 
-app.set("port", process.env.PORT || 4000);
+app.set("port", process.env.PORT || 4001);
 
 app.listen(app.get("port"), ()=>{
     console.log("estoy en el puerto "+app.get("port"));
@@ -21,7 +21,6 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, "../public")))
 //rutas
 app.use("/apitareas", tareas)
-
 
 
 
